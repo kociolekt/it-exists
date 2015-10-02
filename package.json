@@ -1,5 +1,5 @@
 {
-  "name": "itexsists",
+  "name": "it-exsists",
   "version": "0.0.3",
   "description": "check for file/folder/module in node.js",
   "main": "index.js",
