@@ -1,17 +1,17 @@
-itexsists
+it-exsists
 ===========
 > check for file/folder/module in node.js
 
 ## Installation
 
 ```bash
-$ npm install --save itexsists
+$ npm install --save it-exsists
 ```
 
 ## Usage
 
 ```javascript
-var itexsists = require('itexsists');
+var itexsists = require('it-exsists');
 
 // return module or undefined
 var module = itexsists('module-name');
