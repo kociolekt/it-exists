@@ -3,16 +3,18 @@
   "version": "0.0.2",
   "description": "check for file/folder/module in node.js",
   "main": "index.js",
-  "repository": "tomek-f/it-exsists",
+  "repository": "tomek-f/itexsists",
   "keywords": [
     "exsist",
-    "fs"
+    "fs",
+    "path",
+    "module"
   ],
   "author": "Tomek Fijoł",
   "license": "MIT",
   "readmeFilename": "README.md",
   "bugs": {
-    "url": "https://github.com/tomek-f/it-exsists/issues"
+    "url": "https://github.com/tomek-f/itexsists/issues"
   },
-  "homepage": "https://github.com/tomek-f/it-exsists#readme"
+  "homepage": "https://github.com/tomek-f/itexsists#readme"
 }
