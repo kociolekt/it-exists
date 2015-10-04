@@ -1,6 +1,6 @@
-it-exsists
-===========
-> check for file/folder/module in node.js
+# it-exsists
+
+> Check for file/folder/module in node.js
 
 ## Installation
 
