@@ -4,8 +4,7 @@
 
 ## 2do
 
-* Comments
-* Docs
+* Comments - JSDoc
 
 ## Installation
 
