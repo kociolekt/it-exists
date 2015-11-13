@@ -5,6 +5,7 @@
 ## 2do
 
 * Comments - JSDoc
+* tests
 
 ## Installation
 
@@ -15,16 +16,34 @@ $ npm install --save it-exsists
 ## Usage
 
 ```javascript
-var itexsists = require('it-exsists');
+var itExsists = require('it-exsists');
 
 // return module or undefined
-var module = itexsists('module-name');
-if (module) {
-  module('do magic!');
+var myModule = itExsists('module-name');
+if (myModule) {
+  // good
+  myModule('do magic!');
+} else {
+  // bad
 }
 
 // return path stats or undefined
-if (!itexsists.path('./tmp')) {
+if (!itExsists.pathSync('./tmp')) {
+  // bad
   require('fs').mkdirSync('./tmp');
+} else {
+  // good
 }
+
+// return path stats or undefined
+itExsists.pathAsync('./tmp', function(stats) {
+  if (!stats) {
+    // bad
+    require('fs').mkdir('./tmp', function() {
+      // after
+    });
+  } else {
+    // good
+  }
+});
 ```
