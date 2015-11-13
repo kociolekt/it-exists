@@ -19,7 +19,7 @@ itExsist.pathSync = function(path) {
 
   try {
 
-    return require('fs').statSync(path);
+    return fs.statSync(path);
  
   } catch (e) {
 
