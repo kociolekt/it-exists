@@ -1,21 +1,49 @@
-var
-  itExsist = function(mod) {
+var fs = require('fs');
 
-    try {
-      return require(mod);
-    } catch (e) {
-      return;
-    }
-
-  };
-
-itExsist.path = function(path) {
+function itExsist(someModule) {
 
   try {
-    return require('fs').statSync(path);
+
+    return require(someModule);
+
   } catch (e) {
+
+    // undefined
     return;
+
   }
+
+};
+
+itExsist.pathSync = function(path) {
+
+  try {
+
+    return require('fs').statSync(path);
+ 
+  } catch (e) {
+
+    // undefined
+    return;
+
+  }
+
+};
+
+itExsist.pathAsync = function(path, cb) {
+
+  fs.stat(path, function(err, stats) {
+
+    if (err) {
+
+      // undefined
+      cb();
+
+    }
+
+    cb(stats);
+
+  })
 
 };
 
