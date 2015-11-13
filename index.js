@@ -1,5 +1,20 @@
+/**
+ * @fileoverview check for file/folder/module in node.js
+ * @author Tomek Fijoł
+ */
+'use strict';
+
 var fs = require('fs');
 
+//------------------------------------------------------------------------------
+// Public Interface
+//------------------------------------------------------------------------------
+
+/**
+ * check for module
+ * @param {string} module name
+ * @returns {module|undefined} module or undefined
+ */
 function itExsist(someModule) {
   try {
     return require(someModule);
@@ -9,6 +24,11 @@ function itExsist(someModule) {
   }
 }
 
+/**
+ * check for path sync
+ * @param {string} path - check this path
+ * @returns {Object|undefined} path stats or undefined
+ */
 itExsist.pathSync = function(path) {
   try {
     return fs.statSync(path);
@@ -17,7 +37,12 @@ itExsist.pathSync = function(path) {
     return;
   }
 };
-
+  
+/**
+ * check for path async
+ * @param {string} path - check this path
+ * @param {pathAsync~requestCallback} cb - callback for async function
+ */
 itExsist.pathAsync = function(path, cb) {
   fs.stat(path, function(err, stats) {
     if (err) {
@@ -27,5 +52,12 @@ itExsist.pathAsync = function(path, cb) {
     cb(stats);
   });
 };
+
+/**
+ * callback from pathAsync function
+ * @callback pathAsync~requestCallback
+ * @param {string} err - error returned
+ * @param {Object|undefined} path stats or undefined
+ */
 
 module.exports = itExsist;
