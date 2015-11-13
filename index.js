@@ -56,8 +56,6 @@ itExsist.pathAsync = function(path, cb) {
 /**
  * callback from pathAsync function
  * @callback pathAsync~requestCallback
- * @param {string} err - error returned
- * @param {Object|undefined} stats - path stats or undefined
  * @returns {Object|undefined} path stats or undefined
  */
 
