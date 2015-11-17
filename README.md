@@ -2,10 +2,6 @@
 
 > Check for file/folder/module in node.js
 
-## 2do
-
-* tests
-
 ## Installation
 
 ```bash
@@ -17,7 +13,8 @@ $ npm install --save it-exsists
 ```javascript
 var itExsists = require('it-exsists');
 
-// return module or undefined
+// check for module in node_modules dir
+// returns module or undefined
 var myModule = itExsists('module-name');
 if (myModule) {
   // good
@@ -33,6 +30,11 @@ if (!itExsists.pathSync('./tmp')) {
 } else {
   // good
 }
+if (!itExsists.pathSync('./package.json')) {
+  // bad
+} else {
+  // good
+}
 
 // return path stats or undefined
 itExsists.pathAsync('./tmp', function(stats) {
@@ -41,6 +43,13 @@ itExsists.pathAsync('./tmp', function(stats) {
     require('fs').mkdir('./tmp', function() {
       // after
     });
+  } else {
+    // good
+  }
+});
+itExsists.pathAsync('./package.json', function(stats) {
+  if (!stats) {
+    // bad
   } else {
     // good
   }
