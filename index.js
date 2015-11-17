@@ -17,11 +17,9 @@ var fs = require('fs');
  */
 function itExsist(someModule) {
   try {
-    var a = require(someModule);
-    return a;
+    return require(someModule);
   } catch (e) {
-    // undefined
-    return;
+    // return undefined
   }
 }
 
@@ -34,8 +32,7 @@ itExsist.pathSync = function(path) {
   try {
     return fs.statSync(path);
   } catch (e) {
-    // undefined
-    return;
+    // return undefined
   }
 };
 
@@ -47,8 +44,9 @@ itExsist.pathSync = function(path) {
 itExsist.pathAsync = function(path, cb) {
   fs.stat(path, function(err, stats) {
     if (err) {
-      // undefined
+      // return undefined
       cb();
+      //end
       return;
     }
     cb(stats);

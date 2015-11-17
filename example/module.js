@@ -5,4 +5,4 @@ console.log('url', !!itExsists('url'));
 
 // why not!!!
 console.log('../package.json', !!itExsists('../package.json'));
-console.log('./pathAsync.js', !!itExsists('./pathAsync.js'));
+console.log('./test.js', !!itExsists('./test.js'));
