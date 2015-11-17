@@ -17,7 +17,8 @@ var fs = require('fs');
  */
 function itExsist(someModule) {
   try {
-    return require(someModule);
+    var a = require(someModule);
+    return a;
   } catch (e) {
     // undefined
     return;
@@ -37,7 +38,7 @@ itExsist.pathSync = function(path) {
     return;
   }
 };
-  
+
 /**
  * check for path async
  * @param {string} path - check this path
@@ -48,6 +49,7 @@ itExsist.pathAsync = function(path, cb) {
     if (err) {
       // undefined
       cb();
+      return;
     }
     cb(stats);
   });
