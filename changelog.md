@@ -16,6 +16,6 @@
 * JSDoc
 * examples
 
-## x.x.x
+## > 0.1.0
 
 * no changelog entries -> see github commits :)
