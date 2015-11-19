@@ -1,5 +1,9 @@
 # changelog
 
+## x.x.x
+
+* changelog.md in package.json files
+
 ## 0.1.1
 
 * changelog.md
