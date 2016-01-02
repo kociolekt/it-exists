@@ -55,3 +55,7 @@ itExsists.pathAsync('./package.json', function(stats) {
   }
 });
 ```
+
+## Changelog
+
+[View on github](https://github.com/tomek-f/it-exsists/blob/master/changelog.md).

@@ -1,5 +1,9 @@
 # changelog
 
+## 0.1.3
+
+* changelog link in readme
+
 ## 0.1.2
 
 * noop option in itExsists (for modules)
