@@ -1,6 +1,7 @@
 var itExsists = require('../');
 var customCrazyModule = itExsists('custom-crazy-module');
 var url = itExsists('url');
+var sth = itExsists('sth', true); // module/noop
 
 if (url) {
   url('so sth');
@@ -8,8 +9,10 @@ if (url) {
   console.log('bad day');
 }
 
+sth('do sth'); // sth happens or not
+
 if (customCrazyModule) {
-  customCrazyModule('so sth');
+  customCrazyModule('do sth');
 } else {
   console.log('bad day');
 }

@@ -4,7 +4,16 @@
  */
 'use strict';
 
+// node file system
 var fs = require('fs');
+
+/**
+ * function that does nothing
+ * @returns undefined
+ */
+function noop() {
+  // nothing here
+}
 
 //------------------------------------------------------------------------------
 // Public Interface
@@ -12,14 +21,18 @@ var fs = require('fs');
 
 /**
  * check for module
- * @param {string} module name
+ * @param {string} moduleName - module name from node_modules
+ * @param {boolean} returnNoop - return noop function instead od undefined
  * @returns {module|undefined} module or undefined
  */
-function itExsist(someModule) {
+function itExsist(moduleName, returnNoop) {
   try {
-    return require(someModule);
+    return require(moduleName);
   } catch (e) {
-    // return undefined
+    if (returnNoop) {
+      return noop;
+    }
+    // else undefined
   }
 }
 

@@ -2,6 +2,7 @@
 
 ## 0.1.2 (wip)
 
+* noop option in itExsists (for modules)
 * module reformat (ws)
 * readme (changelog link)
 * examples
