@@ -1,6 +1,6 @@
 # changelog
 
-## 0.1.2 (wip)
+## 0.1.2
 
 * noop option in itExsists (for modules)
 * module reformat (ws)
