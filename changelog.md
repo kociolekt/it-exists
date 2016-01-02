@@ -1,7 +1,10 @@
 # changelog
 
-## x.x.x
+## 0.1.2 (wip)
 
+* module reformat (ws)
+* readme (changelog link)
+* examples
 * changelog.md in package.json files
 
 ## 0.1.1

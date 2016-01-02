@@ -28,7 +28,7 @@ function itExsist(someModule) {
  * @param {string} path - check this path
  * @returns {Object|undefined} path stats or undefined
  */
-itExsist.pathSync = function(path) {
+itExsist.pathSync = function (path) {
   try {
     return fs.statSync(path);
   } catch (e) {
@@ -41,8 +41,8 @@ itExsist.pathSync = function(path) {
  * @param {string} path - check this path
  * @param {pathAsync~requestCallback} cb - callback for async function
  */
-itExsist.pathAsync = function(path, cb) {
-  fs.stat(path, function(err, stats) {
+itExsist.pathAsync = function (path, cb) {
+  fs.stat(path, function (err, stats) {
     if (err) {
       // return undefined
       cb();
