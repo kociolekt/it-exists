@@ -1,7 +1,7 @@
-var itExsists = require('../');
-var customCrazyModule = itExsists('custom-crazy-module');
-var url = itExsists('url-lolo');
-var sth = itExsists('sth', true); // module/noop
+var itExists = require('../');
+var customCrazyModule = itExists('custom-crazy-module');
+var url = itExists('url-lolo');
+var sth = itExists('sth', true); // module/noop
 
 if (url) {
   url('so sth');
@@ -18,5 +18,5 @@ if (customCrazyModule) {
   console.log('bad day');
 }
 
-console.log('custom-crazy-name', !!itExsists('custom-crazy-name')); // true/false
+console.log('custom-crazy-name', !!itExists('custom-crazy-name')); // true/false
 console.log('url', !!url); // true/false

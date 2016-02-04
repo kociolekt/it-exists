@@ -1,5 +1,9 @@
 # changelog
 
+## 0.2.0
+
+* rename - typo: it-exsists > it-exists :)
+
 ## 0.1.3
 
 * changelog link in readme

@@ -1,21 +1,21 @@
-# it-exsists
+# it-exists
 
 > Check for file/folder/module in node.js
 
 ## Installation
 
 ```bash
-$ npm install --save it-exsists
-```
+$ npm install --save it-exists
+````
 
 ## Usage
 
 ```javascript
-var itExsists = require('it-exsists');
+var itExists = require('it-exists');
 
 // check for module in node_modules dir
 // returns module or undefined
-var myModule = itExsists('module-name');
+var myModule = itExists('module-name');
 if (myModule) {
   // good
   myModule('do magic!');
@@ -24,20 +24,20 @@ if (myModule) {
 }
 
 // return path stats or undefined
-if (!itExsists.pathSync('./tmp')) {
+if (!itExists.pathSync('./tmp')) {
   // bad
   require('fs').mkdirSync('./tmp');
 } else {
   // good
 }
-if (!itExsists.pathSync('./package.json')) {
+if (!itExists.pathSync('./package.json')) {
   // bad
 } else {
   // good
 }
 
 // return path stats or undefined
-itExsists.pathAsync('./tmp', function(stats) {
+itExists.pathAsync('./tmp', function(stats) {
   if (!stats) {
     // bad
     require('fs').mkdir('./tmp', function() {
@@ -47,7 +47,7 @@ itExsists.pathAsync('./tmp', function(stats) {
     // good
   }
 });
-itExsists.pathAsync('./package.json', function(stats) {
+itExists.pathAsync('./package.json', function(stats) {
   if (!stats) {
     // bad
   } else {
@@ -58,4 +58,4 @@ itExsists.pathAsync('./package.json', function(stats) {
 
 ## Changelog
 
-[View on github](https://github.com/tomek-f/it-exsists/blob/master/changelog.md).
+[View on github](https://github.com/tomek-f/it-exists/blob/master/changelog.md).

@@ -25,7 +25,7 @@ function noop() {
  * @param {boolean} returnNoop - return noop function instead od undefined
  * @returns {module|undefined} module or undefined
  */
-function itExsist(moduleName, returnNoop) {
+function itExists(moduleName, returnNoop) {
   try {
     return require(moduleName);
   } catch (e) {
@@ -41,7 +41,7 @@ function itExsist(moduleName, returnNoop) {
  * @param {string} path - check this path
  * @returns {Object|undefined} path stats or undefined
  */
-itExsist.pathSync = function (path) {
+itExists.pathSync = function (path) {
   try {
     return fs.statSync(path);
   } catch (e) {
@@ -54,7 +54,7 @@ itExsist.pathSync = function (path) {
  * @param {string} path - check this path
  * @param {pathAsync~requestCallback} cb - callback for async function
  */
-itExsist.pathAsync = function (path, cb) {
+itExists.pathAsync = function (path, cb) {
   fs.stat(path, function (err, stats) {
     if (err) {
       // return undefined
@@ -72,4 +72,4 @@ itExsist.pathAsync = function (path, cb) {
  * @returns {Object|undefined} path stats or undefined
  */
 
-module.exports = itExsist;
+module.exports = itExists;

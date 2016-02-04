@@ -1,6 +1,6 @@
-var itExsists = require('../');
+var itExists = require('../');
 
-itExsists.pathAsync('./tmp', function (stats) {
+itExists.pathAsync('./tmp', function (stats) {
   if (stats) {
     console.log('./tmp', !!stats); // true
     console.log('./tmp', stats); // stats
@@ -9,7 +9,7 @@ itExsists.pathAsync('./tmp', function (stats) {
   }
 });
 
-itExsists.pathAsync('../package.json', function (stats) {
+itExists.pathAsync('../package.json', function (stats) {
   if (stats) {
     console.log('../package.json', !!stats); // true
     console.log('../package.json', stats); // stats
