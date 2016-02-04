@@ -2,6 +2,7 @@
 
 ## 0.2.0
 
+* example
 * rename - typo: it-exsists > it-exists :)
 
 ## 0.1.3
